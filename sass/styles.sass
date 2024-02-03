@@ -166,12 +166,21 @@
 /* <!-- Fotos --> */
 
 	
+.fotos-container
+	h1
+		margin-top: 2rem
+
+	@include mobile
+		&.container
+			padding: 0rem 1rem 2rem 1rem
+
 .fotos-list
 	display: grid
 	grid-template-columns: repeat(8, 1fr)
 	grid-template-rows: repeat(5, 5vw)
 	grid-gap: 15px
 	margin-bottom: 2.5rem
+	padding: 0rem 1rem 0rem 1rem
 
 	@include mobile
 		display: block
@@ -205,6 +214,7 @@ footer
 		margin: 0 auto
 		display: flex
 		flex-wrap: wrap
+		text-align: center
 
 		@include mobile
 			max-width: 100%
