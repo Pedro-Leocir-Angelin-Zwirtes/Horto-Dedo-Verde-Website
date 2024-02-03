@@ -1,0 +1,247 @@
+@import 'variables'
+@import 'utilities'
+@import 'galeria'
+
+@include reset
+
+/* <!-- Cabeçalho --> */
+	
+#main-banner 
+	background: linear-gradient(rgba(0,0,0, .6), rgba(0,0,0, .6)), url('../img/loja.jpeg')
+	height: 85vh
+	background-size: cover
+	background-position: center
+	border-bottom: 5px solid $verde-horto
+
+	@include mobile
+		height: 100vh
+
+	nav
+		@include mobile
+			display: none
+
+	.nav-container
+		display: flex
+		justify-content: space-between
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		padding: 1rem 2rem
+		background-color: $cinza-clarinho
+		z-index: 10
+
+		@include mobile
+			padding: 1rem
+
+		img 
+			width: 7%
+			height: auto
+
+			@include mobile
+				width: 15%
+				margin: auto
+
+		&-navbar
+			display: flex
+			align-items: center
+			height: 100%
+			font-weight: bold
+
+			li
+				margin: 5px 1.2rem
+
+
+				a
+					color: black
+					@include main-hover
+
+		.fa-solid.fa-bars
+			margin-top: 0.8rem
+			font-size: 2.4rem
+			color: black
+			display: none
+
+			@include mobile
+				display: block
+				color: $verde-horto
+				
+
+	.title-container
+		color: #fff
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		height: 100%
+
+		@include mobile
+			text-align: center
+			padding: 2rem
+
+		h2
+			font-size: 3rem
+			@extend %title-text-shadow
+
+			@include mobile
+				font-size: 2rem
+		h1
+			font-size: 3rem
+			margin-top: .5rem
+			@extend %title-text-shadow
+
+			@include mobile
+				font-size: 2rem
+
+/* <!-- Sobre a Empresa --> */
+
+.empresa-container
+
+	@include mobile
+		padding: 0 2rem 2rem 2rem
+
+	h2
+		@extend %empresa-title
+		margin-bottom: 2rem
+		
+.empresa-text
+	max-width: 80%
+	margin: 0 auto
+
+	@include mobile
+		max-width: 100%
+
+	p
+		font-weight: 400
+		text-align: center
+		text-align: start
+
+		@include mobile
+			text-indent: 2rem
+			text-align: justify
+
+.empresa-card-container
+	display: grid
+	grid-template-columns: 50% 50%
+	
+	@include mobile
+		display: block
+
+.empresa-img
+	background: url("../img/estufaAtras.jpeg")
+	background-size: cover
+	background-position: center
+
+	@include mobile
+		display: none
+
+
+/* <!-- Produtos que vendemos --> */
+
+/* <!-- Fotos --> */
+
+	
+.fotos-list
+	display: grid
+	grid-template-columns: repeat(8, 1fr)
+	grid-template-rows: repeat(5, 5vw)
+	grid-gap: 15px
+	margin-bottom: 2.5rem
+
+	@include mobile
+		display: block
+
+	&.galer
+		grid-template-rows: repeat(22, 5vw)
+
+	.foto-card
+		width: 100%
+		height: 100%
+
+		@include mobile
+			width: auto
+			height: 300px
+			margin-bottom: 0.5rem
+			
+
+	@include imagens
+	
+	
+
+/* <!-- Footer --> */	
+	
+footer
+	background-color: $footer-bg
+	color: $cinza-text
+	padding: 5rem 2rem
+
+	.footer-container
+		max-width: 1200px
+		margin: 0 auto
+		display: flex
+		flex-wrap: wrap
+
+		@include mobile
+			max-width: 100%
+			flex-direction: column
+
+
+		.footer-title
+			color: #FFF
+			font-weight: bold
+			margin-bottom: 1rem
+
+	.footer-desc-container, .footer-links-container
+		width: 50%
+
+		@include mobile
+			width: 100%
+			margin-bottom: 2rem
+			text-align: center
+
+	.footer-desc-container
+		p
+			width: 80%
+			line-height: 1.3
+
+			@include mobile
+				width: 100%
+
+	.footer-links-container
+		text-align: end
+		display: flex
+
+		@include mobile
+			text-align: center
+
+		@include mobile
+			flex-direction: column
+
+
+		&-list
+			padding: 0 1rem
+
+			@include mobile
+				margin-bottom: 2rem
+
+			
+			li
+				margin-bottom: .5rem
+
+				a
+					color: $cinza-text
+					transition: .5s
+
+					&:hover
+						color: #FFF
+
+	.footer-copy-right-container
+		width: 100%
+		margin-top: 3rem
+
+		@include mobile
+			text-align: center
+
+
+		p
+			margin-bottom: 1rem
