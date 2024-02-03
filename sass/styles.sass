@@ -163,7 +163,12 @@
 
 /* <!-- Produtos que vendemos --> */
 
-/* <!-- Fotos --> */
+/* <!-- Galeria.html --> */
+
+.contato-container
+	display: flex
+	flex-direction: row
+	gap: 2rem
 
 	
 .fotos-container
@@ -172,7 +177,7 @@
 
 	@include mobile
 		&.container
-			padding: 0rem 1rem 2rem 1rem
+			padding: 0rem .5rem 2rem .5rem
 
 .fotos-list
 	display: grid
@@ -200,7 +205,33 @@
 
 	@include imagens
 	
-	
+/* <!-- Conato.html --> */		
+
+.contato-container 
+
+	@include mobile
+		display: flex
+		flex-direction: column
+
+		&.container
+			padding: 2rem 0rem 2rem 0rem
+
+	.map
+		iframe
+			@include mobile
+				width: 350px
+				height: 200px   
+
+.contato-links-container
+	h2, li
+		text-align: start
+
+		@include mobile
+			text-align: center
+
+	a
+		color: $footer-bg
+		font-weight: 500
 
 /* <!-- Footer --> */	
 	
