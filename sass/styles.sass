@@ -61,8 +61,10 @@
 
 
 				a
-					color: black
 					@include main-hover
+
+			#black-a
+				color: black
 
 			&.show
 
@@ -76,7 +78,6 @@
 
 
 					a
-						color: black
 						@include main-hover
 
 		
@@ -117,6 +118,7 @@
 
 			@include mobile
 				font-size: 2rem
+				
 
 /* <!-- Sobre a Empresa --> */
 
@@ -162,6 +164,73 @@
 
 
 /* <!-- Produtos que vendemos --> */
+
+.produtos
+
+	@include mobile
+		&.container
+			padding: .5rem .5rem 2rem .5rem
+		
+	.list-produtos
+		margin-bottom: 2rem
+
+		.card-produto1
+			display: flex
+			flex-direction: row
+			max-width: 65%
+			justify-content: center
+			align-items: center
+			box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1)
+			padding: 1rem
+			margin: 0 auto
+			text-align: justify
+
+			@include mobile
+				flex-direction: column
+				max-width: 100%
+
+				img
+					order: 1
+			
+				p
+					order: 2
+
+			img
+				width: 250px
+				margin-left: 1rem
+
+				@include mobile
+					margin: 0 0 1.4rem 0
+					width: 320px
+
+		.card-produto2
+			display: flex
+			flex-direction: row
+			max-width: 75%
+			justify-content: center
+			align-items: center
+			margin: 2rem auto
+			box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1)
+			padding: 1rem
+			text-align: justify
+
+			@include mobile
+				flex-direction: column
+				max-width: 100%
+
+				img
+					order: 1
+			
+				p
+					order: 2
+			
+			img
+				width: 250px
+				margin-right: 1rem
+
+				@include mobile
+					margin: 0 0 1.4rem 0
+					width: 320px
 
 /* <!-- Galeria.html --> */
 
@@ -233,6 +302,9 @@
 		color: $footer-bg
 		font-weight: 500
 
+	.info
+		margin-bottom: 2rem
+
 /* <!-- Footer --> */	
 	
 footer
@@ -253,9 +325,19 @@ footer
 
 
 		.footer-title
+			text-align: start
 			color: #FFF
 			font-weight: bold
 			margin-bottom: 1rem
+
+			&.esq
+				text-align: end
+
+				@include mobile
+				text-align: center
+
+		.footer-desc-container
+			text-align: start
 
 	.footer-desc-container, .footer-links-container
 		width: 50%
@@ -276,6 +358,7 @@ footer
 	.footer-links-container
 		text-align: end
 		display: flex
+		justify-content: end
 
 		@include mobile
 			text-align: center
